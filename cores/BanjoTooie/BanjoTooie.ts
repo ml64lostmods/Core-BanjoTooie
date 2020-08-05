@@ -732,6 +732,9 @@ export class BanjoTooie implements ICore, API.IBTCore {
         this.player = new Player(this.ModLoader.emulator);
         this.runtime = new Runtime(this.ModLoader.emulator);
         this.save = new SaveContext(this.ModLoader.emulator);
+
+        // Integrity Check
+        this.ModLoader.emulator.rdramWrite32(0x0124b4, 0x00000000);
     }
 
     onTick(): void {
