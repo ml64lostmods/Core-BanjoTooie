@@ -5,26 +5,32 @@ export const enum GameVersion {
 	USA_1_0,
 }
 
-export const enum AddressType {
-	// Runtime
-	RT_CURRENT_MAP = 'BT:rt_current_map',
-	RT_MAP_TRIGGER = 'BT:rt_map_trigger',
-	RT_MAP_TRIGGER_TARGET = 'BT:rt_map_trigger_target',
-	RT_MAP_DESTINATION = 'BT:rt_map_destination',
-	RT_DCW_LOCATION = 'BT:rt_dcw_location',
+export const enum BtEvents {
+	ON_SCENE_CHANGE = "BT:onSceneChange",
+}
 
+export const enum CMD {
+	EMPTY = 0x00000000,
+	SPAWN = 0xffffffff,
+	DESPAWN = 0xfffffffe,
+}
+
+export const enum AddressType {
+	CAMERA = 'BT:camera',
+	INVENTORY = 'BT:inventory_ptr',
+	PLAYER = 'BT:player',
+	PUPPET = 'BT:puppet',
+
+	// Player
+	PLYR_PTR_INDEX = 'BT:plyr_ptr_index',
+
+	// Runtime
 	RT_PROF_HOVER = 'BT:rt_prof_hover',
 	RT_PROF_SELECT = 'BT:rt_prof_select',
 
-	RT_CONSUMABLE_BASE = 'BT:rt_consumable_base',
-	RT_CONSUMABLE_PTR = 'BT:rt_consumable_ptr',
 	RT_AIR = 'BT:rt_air',
 	RT_CHARACTER_STATE = 'BT:rt_character_state',
 	RT_CHARACTER_CHANGE = 'BT:rt_character_change',
-
-	RT_JINJO_BASE_ADDR = 'BT:rt_jinjo_base_addr',
-
-	RT_ICON_ADDR = 'BT:rt_icon_addr',
 	RT_CUR_HEALTH_BEAR_BIRD = 'BT:rt_current_health_bear_bird',
 	RT_CUR_HEALTH_BEAR = 'BT:rt_current_health_bear',
 	RT_CUR_HEALTH_MUMBO = 'BT:rt_current_health_mumbo',
@@ -35,11 +41,13 @@ export const enum AddressType {
 	RT_CUR_HEALTH_SNOWBALL = 'BT:rt_current_health_snowball',
 	RT_CUR_HEALTH_WASHING_MACHINE = 'BT:rt_current_health_washing_machine',
 	RT_CUR_HEALTH_BIRD = 'BT:rt_current_health_bird_bird',
-
-	RT_PLYR_PTR = 'BT:rt_plyr_ptr',
-	RT_PLYR_PTR_INDEX = 'BT:rt_plyr_ptr_index',
+	RT_CURRENT_SCENE = 'BT:rt_current_scene',
+	RT_DCW_LOCATION = 'BT:rt_dcw_location',
+	RT_GOTO_SCENE = 'BT:rt_goto_scene',
+	RT_IS_LOADING = 'BT:rt_is_loading',
+	RT_ICON_ADDR = 'BT:plyr_icon_addr',
+	RT_JINJO_ADDR = 'BT:rt_jinjo_addr',
 	RT_OBJ_ARRAY_PTR = 'BT:rt_obj_array_ptr',
-	RT_CAMERA_PTR = 'BT:rt_camera_ptr',
 
 	// Save
 	SAVE_GAME_FLAGS = 'BT:save_game_flags',
@@ -873,12 +881,12 @@ export enum ConsumableType {
 	FIRE_EGGS = 0x01,
 	ICE_EGGS = 0x02,
 	GRENADE_EGGS = 0x03,
-	CW_EGGS = 0x04,
+	CLOCKWORK_EGGS = 0x04,
 	PROXIMITY_EGGS = 0x05,
 	RED_FEATHERS = 0x06,
 	GOLD_FEATHERS = 0x07,
 	GLOWBOS = 0x08,
-	EMPTY_HONEYCOMBS = 0x09,
+	HONEYCOMBS = 0x09,
 	CHEATO_PAGES = 0x0a,
 	BURGERS = 0x0b,
 	FRIES = 0x0c,
@@ -887,9 +895,9 @@ export enum ConsumableType {
 	GOLD_IDOLS = 0x0f,
 	BEANS = 0x10,
 	FISH = 0x11,
-	EGGS = 0x12,
-	ICE_KEYS = 0x13,
-	MEGA_GLOWBOS = 0x14,
+	SNS_EGGS = 0x12,
+	ICE_KEY = 0x13,
+	MEGA_GLOWBO = 0x14,
 	UNKNOWN1 = 0x15,
 	UNKNOWN2 = 0x16,
 	UNKNOWN3 = 0x17,
