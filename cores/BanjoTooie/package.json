@@ -1,10 +1,10 @@
 {
   "name": "BanjoTooie",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "",
   "main": "BanjoTooie.js",
   "author": "PMONickPop123, SpiceyWolf",
-  "credits": "Mittenz",
+  "credits": "Mittenz, TheLensta",
   "license": "GPL3",
   "core": "BanjoTooie",
   "updateUrl": "https://raw.githubusercontent.com/Modloader-Lost-Mods/Core-BanjoTooie/master/update.json"
