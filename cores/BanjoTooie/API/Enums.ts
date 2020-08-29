@@ -46,7 +46,6 @@ export const enum AddressType {
 	RT_GOTO_SCENE = 'BT:rt_goto_scene',
 	RT_IS_LOADING = 'BT:rt_is_loading',
 	RT_ICON_ADDR = 'BT:plyr_icon_addr',
-	RT_JINJO_ADDR = 'BT:rt_jinjo_addr',
 	RT_OBJ_ARRAY_PTR = 'BT:rt_obj_array_ptr',
 
 	// Save

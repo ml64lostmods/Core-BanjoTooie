@@ -95,9 +95,6 @@ export interface IRuntime {
 	current_scene: number;
 	dcw_location: number;
 
-	get_jinjo(index: number): number;
-	set_jinjo(index: number, value: number): void;
-
 	is_loading(): boolean;
 	goto_scene(scene: number): void;
 }

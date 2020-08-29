@@ -31,7 +31,6 @@ export namespace VersionHandler {
         global.ModLoader[API.AddressType.RT_GOTO_SCENE] = 0x12c390;
         global.ModLoader[API.AddressType.RT_IS_LOADING] = 0x12c392;
         global.ModLoader[API.AddressType.RT_ICON_ADDR] = 0x11ff95;
-        global.ModLoader[API.AddressType.RT_JINJO_ADDR] = 0x11fa71;
         global.ModLoader[API.AddressType.RT_OBJ_ARRAY_PTR] = 0x13bbd0;
 
         // Save Data
@@ -68,7 +67,6 @@ export namespace VersionHandler {
         global.ModLoader[API.AddressType.RT_GOTO_SCENE] = 0x1217f0;
         global.ModLoader[API.AddressType.RT_IS_LOADING] = 0x1217f2;
         global.ModLoader[API.AddressType.RT_ICON_ADDR] = 0x115325;
-        global.ModLoader[API.AddressType.RT_JINJO_ADDR] = 0x114e01;
         global.ModLoader[API.AddressType.RT_OBJ_ARRAY_PTR] = 0x131020;
 
         // Save Data
@@ -106,7 +104,6 @@ export namespace VersionHandler {
         global.ModLoader[API.AddressType.RT_GOTO_SCENE] = 0x12C5A0;
         global.ModLoader[API.AddressType.RT_IS_LOADING] = 0x12C5A2;
         global.ModLoader[API.AddressType.RT_ICON_ADDR] = 0x120155;
-        global.ModLoader[API.AddressType.RT_JINJO_ADDR] = 0x11fc31;
         global.ModLoader[API.AddressType.RT_OBJ_ARRAY_PTR] = 0x13be60;
 
         // Save Data
@@ -144,7 +141,6 @@ export namespace VersionHandler {
         global.ModLoader[API.AddressType.RT_GOTO_SCENE] = 0x127640;
         global.ModLoader[API.AddressType.RT_IS_LOADING] = 0x127642;
         global.ModLoader[API.AddressType.RT_ICON_ADDR] = 0x11b065;
-        global.ModLoader[API.AddressType.RT_JINJO_ADDR] = 0x11ab41;
         global.ModLoader[API.AddressType.RT_OBJ_ARRAY_PTR] = 0x136EE0;
 
         // Save Data

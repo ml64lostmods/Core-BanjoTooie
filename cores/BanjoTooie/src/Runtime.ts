@@ -9,7 +9,6 @@ export class Runtime extends API.BaseObj implements API.IRuntime {
     private goto_scene_addr: number = global.ModLoader[API.AddressType.RT_GOTO_SCENE];
     private is_loading_addr = global.ModLoader[API.AddressType.RT_IS_LOADING];
     private icon_addr: number = global.ModLoader[API.AddressType.RT_ICON_ADDR];
-    private jinjo_addr: number = global.ModLoader[API.AddressType.RT_JINJO_ADDR];
     private obj_array_ptr_addr: number = global.ModLoader[API.AddressType.RT_OBJ_ARRAY_PTR];
 
     get_current_profile(): API.ProfileType {
@@ -53,13 +52,6 @@ export class Runtime extends API.BaseObj implements API.IRuntime {
     }
     set dcw_location(val: number) {
         this.emulator.rdramWrite16(this.dcw_location_addr, val);
-    }
-
-    get_jinjo(index: number): number {
-        return this.emulator.rdramRead8(this.jinjo_addr + (index * 0x3));
-    }
-    set_jinjo(index: number, val: number): void {
-        this.emulator.rdramWrite8(this.jinjo_addr + (index * 0x3), val);
     }
 
     is_loading(): boolean {
