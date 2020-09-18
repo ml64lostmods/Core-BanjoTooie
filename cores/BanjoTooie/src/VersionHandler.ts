@@ -6,12 +6,15 @@ export namespace VersionHandler {
         global.ModLoader[API.AddressType.INVENTORY] = 0x12ffc0;
         global.ModLoader[API.AddressType.PLAYER] = 0x13a210;
 
+        // Global Data
+        global.ModLoader[API.AddressType.ANIM_ARRAY] = 0x13bb60;
+
         // Player Data
         global.ModLoader[API.AddressType.PLYR_PTR_INDEX] = 0x13a25f;
 
         // Runtime Data
-        //global.ModLoader[API.AddressType.RT_PROF_HOVER] = 0x12b3f0;
-        //global.ModLoader[API.AddressType.RT_PROF_SELECT] = 0x12b3f1;
+        global.ModLoader[API.AddressType.RT_PROF_HOVER] = 0x130170;
+        global.ModLoader[API.AddressType.RT_PROF_SELECT] = 0x130171;
 
         global.ModLoader[API.AddressType.RT_AIR] = 0x12fdc0;
         global.ModLoader[API.AddressType.RT_CHARACTER_STATE] = 0x13bc53;
@@ -43,12 +46,16 @@ export namespace VersionHandler {
         global.ModLoader[API.AddressType.INVENTORY] = 0x125420;
         global.ModLoader[API.AddressType.PLAYER] = 0x12f660;
 
+        // Global Data
+        global.ModLoader[API.AddressType.ANIM_ARRAY] = 0x130fb0;
+
         // Player Data
         global.ModLoader[API.AddressType.PLYR_PTR_INDEX] = 0x12f6af;
 
         // Runtime Data
-        //global.ModLoader[API.AddressType.RT_PROF_HOVER] = 0x12b3f0;
-        //global.ModLoader[API.AddressType.RT_PROF_SELECT] = 0x12b3f1;
+        global.ModLoader[API.AddressType.RT_PROF_HOVER] = 0x1255C0;
+        global.ModLoader[API.AddressType.RT_PROF_SELECT] = 0x1255C1;
+
         global.ModLoader[API.AddressType.RT_AIR] = 0x125220;
         global.ModLoader[API.AddressType.RT_CHARACTER_STATE] = 0x1310a3;
         global.ModLoader[API.AddressType.RT_CHARACTER_CHANGE] = 0x1211fc;
@@ -79,12 +86,15 @@ export namespace VersionHandler {
         global.ModLoader[API.AddressType.INVENTORY] = 0x1301d0;
         global.ModLoader[API.AddressType.PLAYER] = 0x13a4a0;
 
+        // Global Data
+        global.ModLoader[API.AddressType.ANIM_ARRAY] = 0x13bdf0;
+
         // Player Data
         global.ModLoader[API.AddressType.PLYR_PTR_INDEX] = 0x13a4ef;
 
         // Runtime Data
-        //global.ModLoader[API.AddressType.RT_PROF_HOVER] = 0x12b3f0;
-        //global.ModLoader[API.AddressType.RT_PROF_SELECT] = 0x12b3f1;
+        global.ModLoader[API.AddressType.RT_PROF_HOVER] = 0x130400;
+        global.ModLoader[API.AddressType.RT_PROF_SELECT] = 0x130401;
 
         global.ModLoader[API.AddressType.RT_AIR] = 0x12ffd0;
         global.ModLoader[API.AddressType.RT_CHARACTER_STATE] = 0x13bee3;
@@ -116,8 +126,11 @@ export namespace VersionHandler {
         global.ModLoader[API.AddressType.INVENTORY] = 0x12B250;
         global.ModLoader[API.AddressType.PLAYER] = 0x135490;
 
+        // Global Data
+        global.ModLoader[API.AddressType.ANIM_ARRAY] = 0x136E70;
+
         // Player Data
-        global.ModLoader[API.AddressType.PLYR_PTR_INDEX] = 0x1354DF;
+        global.ModLoader[API.AddressType.PLYR_PTR_INDEX] = 0x1354df;
 
         // Runtime Data
         global.ModLoader[API.AddressType.RT_PROF_HOVER] = 0x12b3f0;

@@ -63,10 +63,16 @@ export class BanjoTooie implements ICore, API.IBTCore {
                 break;
         }
 
-        // Payload injection
-        // this.payloads.push(__dirname + '/src/asm/' + vStr + '/CommandBuffer.payload');
+		// Payload injection
+        this.payloads.push(__dirname + '/src/asm/' + vStr + '/Multiplayer.payload');
+
+		// Version independant globals
+        global.ModLoader[API.AddressType.PTR_TABLE] = 0xf00000;
+        global.ModLoader[API.AddressType.CMD_BUFFER] = 0xf01000;
+        global.ModLoader[API.AddressType.PUPPET_INFO] = 0xf01200;
+        global.ModLoader[API.AddressType.PINFO_SIZE] = 8;
     }
-    init(): void { }
+    init(): void {}
     postinit(): void {
         this.camera = new CORE.Camera(this.ModLoader.emulator);
         this.player = new CORE.Player(this.ModLoader.emulator);

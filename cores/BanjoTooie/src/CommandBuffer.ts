@@ -13,15 +13,15 @@ export class Slot {
 	}
 
 	get cmd(): API.CMD {
-		return this.emu.rdramRead32(this.addr);
+		return this.emu.rdramRead8(this.addr);
 	}
 	set cmd(command: API.CMD) {
 		let exists = this.ptr !== 0x000000;
 		if (
 			(exists && command === API.CMD.SPAWN) ||
 			(!exists && command === API.CMD.DESPAWN)
-		) { this.emu.rdramWrite32(this.addr, API.CMD.EMPTY); }
-		else { this.emu.rdramWrite32(this.addr, command); }
+		) { this.emu.rdramWrite8(this.addr, API.CMD.EMPTY); }
+		else { this.emu.rdramWrite8(this.addr, command); }
 	}
 
 	get ptr(): number {
@@ -30,7 +30,7 @@ export class Slot {
 }
 
 export class CommandBuffer implements API.ICommandBuffer {
-	private readonly cmd_count = global.ModLoader[API.AddressType.PUPPET];
+	private readonly cmd_count = global.ModLoader[API.AddressType.CMD_BUFFER];
 	private readonly slots: Slot[] = new Array<Slot>(16);
 
 	constructor(emu: IMemory) {

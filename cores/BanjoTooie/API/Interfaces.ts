@@ -72,6 +72,12 @@ export interface IPlayer {
 	exists(): boolean;
 	instance(): number;
 
+	animation: Buffer;
+	anim_frame: number;
+	anim_id: number;
+	flip_facing: boolean;
+	model_index: number;
+	model_ptr: number;
 	position: Buffer;
 	pos_x: number;
 	pos_y: number;

@@ -10,16 +10,24 @@ export const enum BtEvents {
 }
 
 export const enum CMD {
-	EMPTY = 0x00000000,
-	SPAWN = 0xffffffff,
-	DESPAWN = 0xfffffffe,
+	EMPTY = 0x00,
+	SPAWN = 0x01,
+	DESPAWN = 0x02,
 }
 
 export const enum AddressType {
 	CAMERA = 'BT:camera',
 	INVENTORY = 'BT:inventory_ptr',
 	PLAYER = 'BT:player',
-	PUPPET = 'BT:puppet',
+
+	// Multiplayer ASM
+	PTR_TABLE = 'BT:ptr_table',
+	CMD_BUFFER = 'BT:cmd_buffer',
+	PUPPET_INFO = 'BT:puppet_info',
+	PINFO_SIZE = 'BT:puppet_info_size',
+
+	// Global
+	ANIM_ARRAY = 'BT:rt_anim_array',
 
 	// Player
 	PLYR_PTR_INDEX = 'BT:plyr_ptr_index',

@@ -15,6 +15,89 @@ export class Player extends API.BaseObj implements API.IPlayer {
 		return this.emulator.dereferencePointer(ptr + index);
 	}
 
+	get animation(): Buffer {
+		let ptr: number = this.subInstance(0x04);
+		if (ptr === 0) return Buffer.alloc(10);
+		ptr = this.emulator.dereferencePointer(ptr);
+
+		let buf: Buffer = Buffer.alloc(10);
+		buf.writeUInt32BE(this.emulator.rdramRead32(ptr + 0x00), 0);
+		buf.writeUInt32BE(this.emulator.rdramRead32(ptr + 0x2c), 4);
+		buf.writeUInt16BE(this.emulator.rdramRead16(ptr + 0x34), 8);
+		return buf;
+	}
+	set animation(val: Buffer) {
+		let ptr: number = this.subInstance(0x04);
+		if (ptr === 0) return;
+
+		this.emulator.rdramWriteBuffer(ptr + 0x00, val.slice(0, 4));
+		this.emulator.rdramWriteBuffer(ptr + 0x2c, val.slice(4, 8));
+		this.emulator.rdramWriteBuffer(ptr + 0x34, val.slice(8, 10));
+	}
+
+	get anim_frame(): number {
+		let ptr: number = this.subInstance(0x04);
+		if (ptr === 0) return 0;
+
+		return this.emulator.rdramRead32(ptr + 0x00);
+	}
+	set anim_frame(val: number) {
+		let ptr: number = this.subInstance(0x04);
+		if (ptr === 0) return;
+
+		this.emulator.rdramWrite32(ptr + 0x00, val)
+	}
+
+	get anim_id(): number {
+		let ptr: number = this.subInstance(0x04);
+		if (ptr === 0) return 0;
+
+		return this.emulator.rdramRead32(ptr + 0x34);
+	}
+	set anim_id(val: number) {
+		let ptr: number = this.subInstance(0x04);
+		if (ptr === 0) return;
+
+		this.emulator.rdramWrite32(ptr + 0x34, val)
+	}
+
+	get flip_facing(): boolean {
+		let ptr: number = this.subInstance(0x50);
+		if (ptr === 0) return false;
+
+		if (this.emulator.rdramRead8(ptr + 0x15) === 2)
+			return true;
+		return false;
+	}
+	set flip_facing(val: boolean) {
+		if (!val) return;
+		
+		let fVal = (this.rot_y + 180.0) % 360.0;
+        // this.bufFloat.writeFloatBE(fVal, 0);
+        // this.rot_y = this.bufFloat.readInt32BE(0);
+	}
+
+	get model_index(): number {
+		let ptr: number = this.subInstance(0x50);
+		return this.emulator.rdramRead16(ptr + 0x0c);
+	}
+	set model_index(val: number) {
+		let ptr: number = this.subInstance(0x50);
+		this.emulator.rdramWrite16(ptr + 0x0c, val);
+	}
+
+	get model_ptr(): number {
+		let ptr: number = this.subInstance(0x00);
+		if (ptr === 0) return 0;
+
+		return 0;
+	}
+	set model_ptr(val: number) {
+		let ptr: number = this.subInstance(0x00);
+		if (ptr === 0) return;
+
+	}
+
 	get position(): Buffer {
 		let ptr: number = this.subInstance(0xe4);
 		if (ptr === 0) return Buffer.alloc(12);

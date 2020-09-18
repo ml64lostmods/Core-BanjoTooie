@@ -1,9 +1,9 @@
 {
   "name": "BanjoTooie",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "",
   "main": "BanjoTooie.js",
-  "author": "PMONickPop123, SpiceyWolf",
+  "author": "PMONickPop123, SpiceyWolf, Wedarobi",
   "credits": "Mittenz, TheLensta",
   "license": "GPL3",
   "core": "BanjoTooie",
