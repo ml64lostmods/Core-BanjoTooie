@@ -19,7 +19,8 @@ export class Slot {
 		let exists = this.ptr !== 0x000000;
 		if (
 			(exists && command === API.CMD.SPAWN) ||
-			(!exists && command === API.CMD.DESPAWN)
+			(!exists && command === API.CMD.DESPAWN)||
+			(!exists && command === API.CMD.DESPAWN_FADE)
 		) { this.emu.rdramWrite8(this.addr, API.CMD.EMPTY); }
 		else { this.emu.rdramWrite8(this.addr, command); }
 	}

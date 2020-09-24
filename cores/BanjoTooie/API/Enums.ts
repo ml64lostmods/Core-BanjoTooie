@@ -13,6 +13,7 @@ export const enum CMD {
 	EMPTY = 0x00,
 	SPAWN = 0x01,
 	DESPAWN = 0x02,
+	DESPAWN_FADE = 0x03
 }
 
 export const enum AddressType {
