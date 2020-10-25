@@ -1,12 +1,14 @@
 {
   "name": "BanjoTooie",
-  "version": "2.1.5",
+  "version": "2.1.7",
   "description": "This is the official repository.",
   "main": "BanjoTooie.js",
   "author": "PMONickPop123, SpiceyWolf, Wedarobi",
   "credits": "Mittenz, TheLensta",
   "license": "GPL3",
-  "dependencies": {},
+  "dependencies": {
+    "@types/node": "^14.14.2"
+  },
   "devDependencies": {},
   "repository": {
     "type": "git",

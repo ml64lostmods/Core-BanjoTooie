@@ -206,6 +206,11 @@ export class Player extends API.BaseObj implements API.IPlayer {
 		this.emulator.rdramWriteF32(ptr, val);
 		this.emulator.rdramWriteF32(ptr + 0x04, val);
 	}
+	rot_y_angle(): number {
+		let ptr: number = this.subInstance(0x50);
+		if (ptr === 0) return 0;
+		return this.emulator.rdramReadF32(ptr + 0x28);
+	}
 
 	get rot_z(): number {
 		let ptr: number = this.subInstance(0xf4);

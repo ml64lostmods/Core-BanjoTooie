@@ -52,10 +52,6 @@ export class BanjoTooie implements ICore, API.IBTCore {
                 vStr = 'P0';
                 break;
             case 'E':
-                this.version = API.GameVersion.USA_1_0;
-                CORE.VersionHandler.load_usa_1_0();
-                vStr = 'E0';
-                break;
             default:
                 this.version = API.GameVersion.USA_1_0;
                 CORE.VersionHandler.load_usa_1_0();

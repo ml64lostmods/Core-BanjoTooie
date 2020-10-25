@@ -87,6 +87,7 @@ export interface IPlayer {
 	rot_y: number;
 	rot_z: number;
 
+	rot_y_angle(): number;
 	get_floor(): number;
 }
 
