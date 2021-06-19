@@ -9,6 +9,8 @@ import * as CORE from './src/Imports';
 // ##################################################################
 
 export class BanjoTooie implements ICore, API.IBTCore {
+    heap_start: number = -1;
+    heap_size: number = -1;
     header = 'NB7';
     ModLoader: IModLoaderAPI = {} as IModLoaderAPI;
     eventTicks: Map<string, Function> = new Map<string, Function>();
