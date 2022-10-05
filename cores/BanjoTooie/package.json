@@ -1,11 +1,21 @@
 {
   "name": "BanjoTooie",
-  "version": "2.1.8",
-  "description": "",
+  "version": "2.1.9",
+  "description": "A 'Banjo Tooie' rom-development-kit/api.",
   "main": "BanjoTooie.js",
   "author": "PMONickPop123, SpiceyWolf, Wedarobi",
   "credits": "Mittenz, TheLensta",
   "license": "GPL3",
   "core": "BanjoTooie",
-  "updateUrl": "https://raw.githubusercontent.com/Modloader-Lost-Mods/Core-BanjoTooie/master/update.json"
+  "updateUrl": "https://raw.githubusercontent.com/Modloader-Lost-Mods/Core-BanjoTooie/master/update.json",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Modloader-Lost-Mods/Core-BanjoTooie.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Modloader-Lost-Mods/Core-BanjoTooie/issues"
+  },
+  "homepage": "https://github.com/Modloader-Lost-Mods/Core-BanjoTooie#readme"
 }
